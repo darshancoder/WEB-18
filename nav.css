@@ -1,0 +1,13 @@
+#Nav{
+    background-color: red;
+    display: flex;
+    font-size: 60px;
+    justify-content: space-around;
+    margin-bottom: 100px;
+
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+ 
+}

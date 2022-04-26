@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="G:\Unit_2\coding\Local Storage\NavBar\nav.css">
+    <title>NavBar</title>
+    
+</head>
+<body>
+    <div id="Nav">
+        <div><a href="backend.html">Backend</a> </div>
+        <div><a href="frontend.html">FrontEnd</a> </div>
+    </div>
+    <form id="inverstorForm">
+        
+        <input id="imgURL" type="text" placeholder="Enter Image URL">
+        <input id="name" type="text" placeholder="Enter Name">
+        <input id="role" type="text" placeholder="Enter Role">
+        <input id="company" type="text" placeholder="Enter Company Logo URL">
+        <input type="submit">
+
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#inverstorForm")
+    .addEventListener("submit",investorFun)
+
+    var investorArr =JSON.parse(localStorage.getItem("investorData")) || []
+
+    function investorFun(){
+        event.preventDefault();
+
+
+        var investorObj ={
+            investorImg:  inverstorForm.imgURL.value,
+            investorName: inverstorForm.name.value,
+            investorRole: inverstorForm.role.value,
+            investorCompanyLogo:inverstorForm.company.value,
+            
+
+        };
+        investorArr.push(investorObj)
+        console.log(investorArr);
+        localStorage.setItem("investorData",JSON.stringify(investorArr))
+    }
+
+    
+
+</script>
+
+<!--  
+{avatar: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+name: "Vijay Shekhar Sharma", position: "Founder & CEO", logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+
+ }, -->
