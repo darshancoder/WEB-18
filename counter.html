@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #best{
+            margin:300px;
+            margin-left: 400px;
+        }
+        h1{
+            margin-left:65px;
+            border: 2px solid black;
+            margin-right: 485px; text-align: center;
+        }
+        #inc{
+            padding: 10px 15px 10px 15px;
+            color: white;
+            background-color: rgb(0, 163, 0);
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            margin-left: 60px;
+            margin-right: 20px;
+            font-size: 18px;
+
+        }
+        #dec
+        {
+            padding: 10px 15px 10px 15px;
+            color: white;
+            background-color: rgb(206, 17, 17);
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        p{
+            margin-left: 60px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body><div id="best">
+    <p></p>
+    <h1></h1>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+</div>
+</body>
+</html>
+<script>
+    var Counter = localStorage.getItem("Count")
+
+    document.querySelector("p").innerText ="Counter Assginment"
+
+    document.querySelector("h1").innerText = Counter
+
+
+    document.querySelector("#dec").addEventListener("click",myDecre)
+    function myDecre(){
+        Counter--
+        document.querySelector("h1").innerText = Counter
+        localStorage.setItem("Count", Counter)
+        
+    }
+
+    document.querySelector("#inc").addEventListener("click",myIncre)
+
+    function myIncre(){
+        Counter++
+        document.querySelector("h1").innerText = Counter
+        localStorage.setItem("Count", Counter)
+    }
+  
+
+  
+</script>
