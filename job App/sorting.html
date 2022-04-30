@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var str = ["a","d","f","e"]
+    // console.log(nums.sort())
+
+    //Compare function(a,b)
+    // a=10, b=6  
+
+    
+    //********When you want to sort the number use this ************
+    // var out = nums.sort(function (a,b){
+    //     return a-b
+    // })
+    // console.log(out)
+
+
+
+    //********When you want to sort the str use this ************
+    // ascending 
+    // empolyeeData.sort(function (a,b){
+    //     if(a.name > b.name){
+    //         return 1;
+    //     }
+    //     if(a.name < b.name){
+    //         return -1;
+    //     }
+
+    //     return 0;
+    // })
+
+    // deceding
+
+    // str.sort(function (a,b){
+    //     if(a>b){
+            // return -1
+    //     }
+    //     if(a < b){
+    //         return 1;
+    //     }
+    //     return 0;
+
+    // })
+    // console.log(str)
+
+
+    var empolyeeData = [
+        {name :"Vijay", designation: "FSD", Salary:"9"},
+        {name :"Rahul", designation: "fronted", Salary:"9"},
+        {name :"JOhan", designation: "backend", Salary:"9"},
+        {name :"wick", designation: "FSD", Salary:"9"},
+        {name :"devil", designation: "fronted", Salary:"9"},
+    ]
+
+    empolyeeData.sort(function (a,b){
+        if(a.name > b.name){
+            return 1;
+        }
+        if(a.name < b.name){
+            return -1;
+        }
+
+        return 0;
+    })
+    console.log(empolyeeData)
+
+    var empolyeeData = [
+        {name :"Vijay", designation: "FSD", Salary:"10"},
+        {name :"Rahul", designation: "fronted", Salary:"55"},
+        {name :"JOhan", designation: "backend", Salary:"62"},
+        {name :"wick", designation: "FSD", Salary:"5"},
+        {name :"devil", designation: "fronted", Salary:"1"},
+    ]
+
+    empolyeeData.sort(function (a,b){
+        if(a.Salary > b.Salary){
+            return 1;
+        }
+        if(a.Salary < b.Salary){
+            return -1;
+        }
+
+        return 0;
+    })
+    console.log(empolyeeData)
+</script>
